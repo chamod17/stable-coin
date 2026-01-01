@@ -1,0 +1,52 @@
+{
+  "name": "cny-stablecoin",
+  "version": "1.0.0",
+  "description": "CNY-pegged stablecoin with multi-chain support (ERC20, TRC20, BEP20, Solana SPL)",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:evm": "hardhat test test/CNYStablecoin.test.js",
+    "test:tron": "hardhat test test/CNYStablecoinTRC20.test.js",
+    "test:solana": "anchor test",
+    "deploy:ethereum": "hardhat run scripts/deploy-erc20.js --network ethereum",
+    "deploy:bsc": "hardhat run scripts/deploy-bep20.js --network bsc",
+    "deploy:tron": "node scripts/deploy-trc20.js",
+    "deploy:solana": "ts-node scripts/deploy-solana.ts",
+    "build:solana": "cd contracts/solana/programs/cny-stablecoin && cargo build-bpf"
+  },
+  "keywords": [
+    "stablecoin",
+    "CNY",
+    "ERC20",
+    "TRC20",
+    "BEP20",
+    "SPL",
+    "blockchain",
+    "multi-chain"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@chainlink/contracts": "^0.8.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts": "^4.9.3",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.5.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.28.0",
+    "@pythnetwork/client": "^2.15.0",
+    "@solana/spl-token": "^0.3.8",
+    "@solana/web3.js": "^1.78.0"
+  }
+}

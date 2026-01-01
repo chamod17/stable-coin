@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build artifacts
+build/
+dist/
+artifacts/
+cache/
+target/
+.anchor/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Hardhat
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# Tron
+tronbox/
+
+# Solana
+test-ledger/
+.program-cache/
